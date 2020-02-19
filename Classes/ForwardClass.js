@@ -1,1 +1,1 @@
-import {Player} from './PlayerClass.js';
+import { Player } from "./PlayerClass.js";

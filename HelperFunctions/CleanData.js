@@ -1,4 +1,5 @@
-import { data } from "../JSON/data.js";
+import { data } from "../JSON/data.js"; //Get JSON Data to Clean
+//Clean JSON Data and getting Relative Information **Categorized by Major Clubs**
 function cleanData() {
   let myData = [];
   data.forEach(element => {
@@ -18,4 +19,4 @@ function cleanData() {
   });
   return myData;
 }
-export {cleanData};
+export { cleanData };
