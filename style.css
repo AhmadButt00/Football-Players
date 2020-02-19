@@ -1,0 +1,45 @@
+html,
+body {
+  width: 100%;
+}
+body {
+  font-family: "Roboto Mono", monospace;
+}
+#container {
+  text-align: center;
+}
+h3 {
+  text-align: center;
+  height: 35px;
+  background: linear-gradient(235deg, #ffffff 0%, #000f25 100%),
+    linear-gradient(180deg, #6100ff 0%, #000000 100%),
+    linear-gradient(
+      235deg,
+      #ffa3ac 0%,
+      #ffa3ac 40%,
+      #00043c calc(40% + 1px),
+      #00043c 60%,
+      #005d6c calc(60% + 1px),
+      #005d6c 70%,
+      #00c9b1 calc(70% + 1px),
+      #00c9b1 100%
+    ),
+    linear-gradient(
+      125deg,
+      #ffa3ac 0%,
+      #ffa3ac 40%,
+      #00043c calc(40% + 1px),
+      #00043c 60%,
+      #005d6c calc(60% + 1px),
+      #005d6c 70%,
+      #00c9b1 calc(70% + 1px),
+      #00c9b1 100%
+    );
+  background-blend-mode: soft-light, screen, darken, normal;
+  color: antiquewhite;
+  padding-bottom: 5px;
+}
+#clubDiv{
+  height: 500px;
+  width: 60%;
+}
