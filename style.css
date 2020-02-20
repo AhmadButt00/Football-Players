@@ -11,35 +11,39 @@ body {
 h3 {
   text-align: center;
   height: 35px;
-  background: linear-gradient(235deg, #ffffff 0%, #000f25 100%),
-    linear-gradient(180deg, #6100ff 0%, #000000 100%),
+  background: radial-gradient(100% 225% at 100% 0%, #faff00 0%, #000000 100%),
+    linear-gradient(235deg, #ff7a00 0%, #000000 100%),
     linear-gradient(
-      235deg,
-      #ffa3ac 0%,
-      #ffa3ac 40%,
-      #00043c calc(40% + 1px),
-      #00043c 60%,
-      #005d6c calc(60% + 1px),
-      #005d6c 70%,
-      #00c9b1 calc(70% + 1px),
-      #00c9b1 100%
+      20deg,
+      #241e92 0%,
+      #241e92 30%,
+      #5432d3 calc(30% + 1px),
+      #5432d3 35%,
+      #7b6cf6 calc(35% + 1px),
+      #7b6cf6 50%,
+      #e5a5ff calc(50% + 1px),
+      #e5a5ff 100%
     ),
     linear-gradient(
-      125deg,
-      #ffa3ac 0%,
-      #ffa3ac 40%,
-      #00043c calc(40% + 1px),
-      #00043c 60%,
-      #005d6c calc(60% + 1px),
-      #005d6c 70%,
-      #00c9b1 calc(70% + 1px),
-      #00c9b1 100%
+      120deg,
+      #110133 0%,
+      #110133 40%,
+      #00918e calc(40% + 1px),
+      #00918e 60%,
+      #4dd599 calc(60% + 1px),
+      #4dd599 70%,
+      #ffdc34 calc(70% + 1px),
+      #ffdc34 100%
     );
-  background-blend-mode: soft-light, screen, darken, normal;
+  background-blend-mode: overlay, hard-light, overlay, normal;
   color: antiquewhite;
   padding-bottom: 5px;
 }
-#clubDiv {
-  height: 500px;
-  width: 60%;
+#playerDiv {
+  height: 50%;
+  width: 90%;
+  align-items: center;
+}
+#position{
+  display: none;
 }

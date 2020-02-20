@@ -1,46 +1,38 @@
+//Initializing the Vanilla DataTable
+const dataTable = new DataTable("#playerTable");
 class Player {
-  constructor(obj, tableId) {
-    let { name, club, nationality, rating, wage } = obj;
-    this.name = name;
-    this.club = club;
-    this.nationality = nationality;
-    this.rating = Number(rating);
-    this.wage = wage;
-    this.tableBody = document
-      .getElementById(tableId)
-      .getElementsByTagName("tbody")[0];
-    this.row = document.createElement("tr");
+  constructor(...args) {
+    this.obj = args[0];
   }
-  setPlayer(obj) {
-    let { name, club, nationality, rating, wage } = obj;
-    this.name = name;
-    this.club = club;
-    this.nationality = nationality;
-    this.rating = Number(rating);
-    this.wage = wage;
+  setPlayer(...args) {
+    this.obj = args[0];
   }
   getPlayer() {
-    let obj = {
-      name: this.name,
-      club: this.club,
-      nationality: this.nationality,
-      rating: this.rating,
-      wage: this.wage
-    };
-    return obj;
-  }
-  insertCell(value) {
-    let cell = document.createElement("td");
-    cell.innerHTML = value;
-    this.row.appendChild(cell);
+    return this.obj;
   }
   insertRow() {
-    this.insertCell(this.name);
-    this.insertCell(this.club);
-    this.insertCell(this.nationality);
-    this.insertCell(this.rating);
-    this.insertCell(this.wage);
-    this.tableBody.appendChild(this.row);
+    let dataArr = Object.values(this.obj);
+    dataTable.rows().add(dataArr);
   }
+  removeAllRows() {
+    let totalPage = dataTable.pages;
+    let length = totalPage.length;
+    for (let i = 1; i < length; i++) {
+      let rowToRemove = dataTable.body.querySelector("tr");
+      let rows = dataTable.body.querySelectorAll("tr");
+      rows.forEach(x => {
+        dataTable.rows().remove(rowToRemove.dataIndex);
+      });
+      dataTable.page(i);
+      let dtRows = dataTable.body.querySelectorAll("tr");
+      dtRows.forEach(x => {
+        dataTable.rows().remove(rowToRemove.dataIndex);
+      });
+    }
+  }
+  displayPosition(){
+    let positionHead = document.getElementById('position');
+    positionHead.style.display = "inline-block";
 }
-export { Player };
+}
+export { Player, dataTable };

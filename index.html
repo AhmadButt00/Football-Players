@@ -22,14 +22,23 @@
     <!-- Main Container Div -->
     <div id="container">
         <h3>**The Champions**</h3>
+        <div id="selectDiv">
+            <select name="position" id="positionSelect">
+                <option selected disabled hidden value="selectPosition">Select Position</option>
+                <option value="defenders">Defenders</option>
+                <option value="midfielders">Mid Fielders</option>
+                <option value="forwards">Forwards</option>
+            </select>
+        </div>
         <div id="playerDiv">
             <table id="playerTable" class="table">
-                <thead class="table-warning">
+                <thead>
                     <th class="text-center">Name</th>
                     <th class="text-center">Club</th>
                     <th class="text-center">Nationality</th>
                     <th class="text-center">Rating</th>
                     <th class="text-center">Wage</th>
+                    <th class="text-center" id="position">Position</th>
                 </thead>
                 <tbody></tbody>
             </table>
@@ -37,5 +46,4 @@
     </div>
     <script type="module" src="script.js"></script>
 </body>
-
 </html>

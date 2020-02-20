@@ -9,7 +9,8 @@ function getPlayers() {
       club: element["Club"],
       nationality: element["Nationality"],
       rating: element["Overall"],
-      wage: element["Wage"]
+      wage: element["Wage"],
+      position: ''
     };
     playerArr.push(playerOb);
   });
