@@ -23,6 +23,23 @@
     <div id="container">
         <h3>**The Champions**</h3>
         <div id="selectDiv">
+            <h5>Club Players</h5>
+            <!-- Select Options of Clubs -->
+            <select name="position" id="clubSelect">
+                <option selected disabled hidden value="selectPosition">Select Club</option>
+                <option value="Real Madrid">Real Madrid</option>
+                <option value="FC Barcelona">Barcelona</option>
+                <option value="FC Bayern München">Bayern Munich</option>
+                <option value="Juventus">Juventus</option>
+                <option value="Paris Saint-Germain">PSG</option>
+                <option value="Liverpool">Liverpool</option>
+                <option value="Manchester City">Manchester City</option>
+                <option value="Manchester United">Manchester United</option>
+                <option value="Chelsea">Chelsea</option>
+            </select>
+            <br>
+            <h5>Overall Players</h5>
+            <!-- Select Players Position -->
             <select name="position" id="positionSelect">
                 <option selected disabled hidden value="selectPosition">Select Position</option>
                 <option value="goalKeepers">GoalKeepers</option>
@@ -30,18 +47,21 @@
                 <option value="midfielders">Mid Fielders</option>
                 <option value="forwards">Forwards</option>
             </select>
+            <!-- Select Forward Players Position -->
             <select name="positionFwd" id="positionSelectFwd">
                 <option selected disabled hidden value="selectPosition">Select Position</option>
                 <option value="right">Right Forward</option>
                 <option value="left">Left Forward</option>
                 <option value="center">Center Forward</option>
             </select>
+            <!-- Select Mid Fielder Players Position -->
             <select name="positionMid" id="positionSelectMid">
                 <option selected disabled hidden value="selectPosition">Select Position</option>
                 <option value="holding">Holding Mid</option>
                 <option value="attacking">Attacking Mid</option>
                 <option value="defensive">Defensive Mid</option>
             </select>
+            <!-- Slect Defender Player Position -->
             <select name="positionDef" id="positionSelectDef">
                 <option selected disabled hidden value="selectPosition">Select Position</option>
                 <option value="center">Center Back</option>
@@ -49,6 +69,7 @@
             </select>
         </div>
         <div id="playerDiv">
+            <!-- Display Player Data in Table -->
             <table id="playerTable" class="table">
                 <thead>
                     <th class="text-center">Name</th>
@@ -62,6 +83,8 @@
             </table>
         </div>
     </div>
+    <!-- Main Script -->
     <script type="module" src="script.js"></script>
 </body>
+
 </html>

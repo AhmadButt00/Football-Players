@@ -11,7 +11,7 @@ class Player {
     return this.obj;
   }
   //Insert Object into Datatable
-  insertRow() {  
+  insertRow() {
     let dataArr = Object.values(this.obj);
     dataTable.rows().add(dataArr);
   }
@@ -33,9 +33,9 @@ class Player {
     }
   }
   //Display the position column
-  displayPosition(){
-    let positionHead = document.getElementById('position');
+  displayPosition() {
+    let positionHead = document.getElementById("position");
     positionHead.style.display = "inline-block";
-}
+  }
 }
 export { Player, dataTable };

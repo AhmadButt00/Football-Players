@@ -6,7 +6,7 @@ function cleanData() {
     if (
       element["Club"] == "Real Madrid" ||
       element["Club"] == "FC Barcelona" ||
-      element["Club"] == "Bayern Munich" ||
+      element["Club"] == "FC Bayern München" ||
       element["Club"] == "Juventus" ||
       element["Club"] == "Paris Saint-Germain" ||
       element["Club"] == "Liverpool" ||

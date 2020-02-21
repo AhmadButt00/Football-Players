@@ -5,11 +5,11 @@ class Defender extends Player {
     super(...args);
     this.playerObject = args[0];
   }
-  getDefender(){
+  getDefender() {
     return this.playerObject;
   }
-  setDefender(...args){
-    this.playerObject = args[0]
+  setDefender(...args) {
+    this.playerObject = args[0];
   }
   //Get Centeral Defenders
   getCenter() {

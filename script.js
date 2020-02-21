@@ -10,10 +10,11 @@ import {
   displayDef,
   displayGK
 } from "./HelperFunctions/DisplayPositionSelect.js";
-import {Defender} from './Classes/Position/DefenderClass.js';
+import { Defender } from "./Classes/Position/DefenderClass.js";
 import { getDefenders } from "./HelperFunctions/GetDefenders.js";
-import {getGoalKeepers} from './HelperFunctions/GetGoalKeepers.js';
-import {GoalKeeper} from './Classes/Position/GoalKeeperClass.js';
+import { getGoalKeepers } from "./HelperFunctions/GetGoalKeepers.js";
+import { GoalKeeper } from "./Classes/Position/GoalKeeperClass.js";
+import { getClubPlayers } from "./HelperFunctions/GetClubPlayers.js";
 
 //Getting Players Data Object Array
 let playersArr = getPlayers();
@@ -237,7 +238,7 @@ function viewWingBack() {
   });
 }
 
-//display MidFielder positioned players- catergory wise
+//display Defender positioned players- catergory wise
 function viewPositionDef() {
   let optionSelectDef = document.getElementById("positionSelectDef").value;
   switch (optionSelectDef) {
@@ -249,6 +250,23 @@ function viewPositionDef() {
       break;
   }
 }
-//Position Select OnChange Attribute --MidFielders
+//Position Select OnChange Attribute --Defenders
 const positionSelectDef = document.getElementById("positionSelectDef");
 positionSelectDef.addEventListener("change", viewPositionDef);
+
+//Display Players on Basis of Club
+function viewClub() {
+  let clubSelect = document.getElementById("clubSelect").value;
+  let clubPlayersArr = getClubPlayers(clubSelect);
+  let player = new Player();
+  player.removeAllRows();
+  player.displayPosition();
+  //Inserting Row using Player Class
+  clubPlayersArr.forEach(playerOb => {
+    let player = new Player(playerOb);
+    player.insertRow();
+  });
+}
+//Club Select onChange Attribute
+const clubSelect = document.getElementById("clubSelect");
+clubSelect.addEventListener("change", viewClub);

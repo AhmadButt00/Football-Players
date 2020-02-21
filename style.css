@@ -44,7 +44,6 @@ h3 {
   width: 90%;
   align-items: center;
 }
-
 #position {
   display: none;
 }
@@ -56,4 +55,7 @@ h3 {
 }
 #positionSelectDef {
   display: none;
+}
+#clubSelect{
+  margin-bottom: 10px;
 }
