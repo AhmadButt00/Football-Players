@@ -5,6 +5,12 @@ class Forward extends Player {
     super(...args);
     this.playerObject = args[0];
   }
+  getForward(){
+    return this.playerObject;
+  }
+  setForward(...args){
+    this.playerObject = args[0]
+  }
   //Get Center Forwards
   getCenter() {
     if (this.playerObject != undefined) {

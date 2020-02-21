@@ -10,10 +10,12 @@ class Player {
   getPlayer() {
     return this.obj;
   }
-  insertRow() {
+  //Insert Object into Datatable
+  insertRow() {  
     let dataArr = Object.values(this.obj);
     dataTable.rows().add(dataArr);
   }
+  //Remove all exisiting rows
   removeAllRows() {
     let totalPage = dataTable.pages;
     let length = totalPage.length;
@@ -30,6 +32,7 @@ class Player {
       });
     }
   }
+  //Display the position column
   displayPosition(){
     let positionHead = document.getElementById('position');
     positionHead.style.display = "inline-block";
