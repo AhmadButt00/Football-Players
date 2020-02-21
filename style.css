@@ -11,31 +11,7 @@ body {
 h3 {
   text-align: center;
   height: 35px;
-  background: radial-gradient(100% 225% at 100% 0%, #faff00 0%, #000000 100%),
-    linear-gradient(235deg, #ff7a00 0%, #000000 100%),
-    linear-gradient(
-      20deg,
-      #241e92 0%,
-      #241e92 30%,
-      #5432d3 calc(30% + 1px),
-      #5432d3 35%,
-      #7b6cf6 calc(35% + 1px),
-      #7b6cf6 50%,
-      #e5a5ff calc(50% + 1px),
-      #e5a5ff 100%
-    ),
-    linear-gradient(
-      120deg,
-      #110133 0%,
-      #110133 40%,
-      #00918e calc(40% + 1px),
-      #00918e 60%,
-      #4dd599 calc(60% + 1px),
-      #4dd599 70%,
-      #ffdc34 calc(70% + 1px),
-      #ffdc34 100%
-    );
-  background-blend-mode: overlay, hard-light, overlay, normal;
+  background-color: #e2434b;
   color: antiquewhite;
   padding-bottom: 5px;
 }
@@ -43,6 +19,10 @@ h3 {
   height: 50%;
   width: 90%;
   align-items: center;
+  margin-left: 50px;
+}
+table{
+  border: 5px;
 }
 #position {
   display: none;
@@ -58,4 +38,12 @@ h3 {
 }
 #clubSelect{
   margin-bottom: 10px;
+}
+h5{
+  background-color: #a80038;
+  display: inline-block;
+  color: antiquewhite;
+}
+th {
+  background-color: #ffeecf;
 }

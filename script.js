@@ -270,3 +270,4 @@ function viewClub() {
 //Club Select onChange Attribute
 const clubSelect = document.getElementById("clubSelect");
 clubSelect.addEventListener("change", viewClub);
+

@@ -35,7 +35,7 @@ class Player {
   //Display the position column
   displayPosition() {
     let positionHead = document.getElementById("position");
-    positionHead.style.display = "inline-block";
+    positionHead.style.display = "block";
   }
 }
 export { Player, dataTable };
